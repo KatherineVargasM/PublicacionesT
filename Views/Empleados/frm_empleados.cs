@@ -83,7 +83,7 @@ namespace _06Publicaciones.Views.Empleados
 
                 empleadoController.InsertarEmpleado(empleado);
                 CargarEmpleados();
-                MessageBox.Show("Empleado agregado con exito.", "Informacion", MessageBoxButtons.OK);
+                ErrorHandler.ManejarInsertar();
             }
             catch (Exception ex)
             {
@@ -117,7 +117,7 @@ namespace _06Publicaciones.Views.Empleados
                 if (resultado == "OK")
                 {
                     CargarEmpleados();
-                    MessageBox.Show("Empleado actualizado con exito.", "Informacion", MessageBoxButtons.OK);
+                    ErrorHandler.ManejarActualizar();
                 }
                 else
                 {
@@ -150,7 +150,7 @@ namespace _06Publicaciones.Views.Empleados
                 }
                 else if (resultado.Contains("Error de restricción de clave foranea"))
                 {
-                    MessageBox.Show("No se puede eliminar el empleado debido a restricciones de clave foranea en la Base de Datos.", "Error de Eliminacion", MessageBoxButtons.OK);
+                    MessageBox.Show("No se puede eliminar el empleado debido a restricciones de clave foránea en la Base de Datos.", "Error de Eliminación", MessageBoxButtons.OK);
                 }
                 else
                 {

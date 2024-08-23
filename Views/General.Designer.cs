@@ -116,6 +116,8 @@ namespace _06Publicaciones.Views
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "General";
             this.Text = "General";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

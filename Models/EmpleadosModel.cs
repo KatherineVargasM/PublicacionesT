@@ -129,8 +129,7 @@ namespace _06Publicaciones.Models
 
                     using (var comando = new SqlCommand(consulta, conexion))
                     {
-                        comando.Parameters.AddWithValue("@empId", idEmpleado);
-
+                        comando.Parameters.AddWithValue("@IdEmpleado", idEmpleado);
                         comando.ExecuteNonQuery();
                     }
                 }

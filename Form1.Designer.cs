@@ -66,6 +66,7 @@ namespace _06Publicaciones
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Publicaciones";
             this.ResumeLayout(false);

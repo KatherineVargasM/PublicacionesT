@@ -84,7 +84,7 @@ namespace _06Publicaciones.Views.Autores
             }
             catch (Exception ex)
             {
-                ErrorHandler.ManejarErrorGeneral(ex, "");
+                ErrorHandler.ManejarErrorGeneral(ex, "Error al intentar agregar el autor.");
             }
 
         }
@@ -166,6 +166,7 @@ namespace _06Publicaciones.Views.Autores
             catch (Exception ex)
             {
                 ErrorHandler.ManejarErrorGeneral(ex, "Error al actualizar el autor.");
+
             }
         }
 
@@ -186,6 +187,7 @@ namespace _06Publicaciones.Views.Autores
                 {
                     ErrorHandler.ManejarEliminar();
                     CargarAutores();
+
                 }
                 else if (resultado == "Error de restricción de clave foranea")
                 {
