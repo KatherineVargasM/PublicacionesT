@@ -1,7 +1,6 @@
-﻿
-namespace _06Publicaciones.Views.Ventas
+﻿namespace _06Publicaciones.Views.Regalias
 {
-    partial class frm_ventas
+    partial class frm_regalias
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +30,7 @@ namespace _06Publicaciones.Views.Ventas
         {
             this.SuspendLayout();
             // 
-            // frm_ventas
+            // frm_regalias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -39,8 +38,8 @@ namespace _06Publicaciones.Views.Ventas
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frm_ventas";
-            this.Text = "Ventas";
+            this.Name = "frm_regalias";
+            this.Text = "Regalias";
             this.ResumeLayout(false);
 
         }

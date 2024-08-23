@@ -83,6 +83,18 @@
     <Compile Include="Views\Autores\frm_autores.Designer.cs">
       <DependentUpon>frm_autores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Descuentos\frm_descuentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Descuentos\frm_descuentos.Designer.cs">
+      <DependentUpon>frm_descuentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Editorial\frm_editorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Editorial\frm_editorial.Designer.cs">
+      <DependentUpon>frm_editorial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Empleados\frm_empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +112,30 @@
     </Compile>
     <Compile Include="Views\Publicaciones\frm_publicaciones.Designer.cs">
       <DependentUpon>frm_publicaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Regalias\frm_regalias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Regalias\frm_regalias.Designer.cs">
+      <DependentUpon>frm_regalias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tiendas\frm_tiendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Tiendas\frm_tiendas.Designer.cs">
+      <DependentUpon>frm_tiendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Titulos\frm_titulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Titulos\frm_titulo.Designer.cs">
+      <DependentUpon>frm_titulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Titulo_Autor\frm_tituloAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Titulo_Autor\frm_tituloAutor.Designer.cs">
+      <DependentUpon>frm_tituloAutor.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Trabajos\frm_trabajo.cs">
       <SubType>Form</SubType>
@@ -129,14 +165,38 @@
     <EmbeddedResource Include="Views\Autores\frm_autores.resx">
       <DependentUpon>frm_autores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Descuentos\frm_descuentos.resx">
+      <DependentUpon>frm_descuentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Editorial\frm_editorial.resx">
+      <DependentUpon>frm_editorial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Empleados\frm_empleados.resx">
       <DependentUpon>frm_empleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\General.resx">
       <DependentUpon>General.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Publicaciones\frm_publicaciones.resx">
+      <DependentUpon>frm_publicaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Regalias\frm_regalias.resx">
+      <DependentUpon>frm_regalias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Tiendas\frm_tiendas.resx">
+      <DependentUpon>frm_tiendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Titulos\frm_titulo.resx">
+      <DependentUpon>frm_titulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Titulo_Autor\frm_tituloAutor.resx">
+      <DependentUpon>frm_tituloAutor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Trabajos\frm_trabajo.resx">
       <DependentUpon>frm_trabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Ventas\frm_ventas.resx">
+      <DependentUpon>frm_ventas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -166,5 +226,6 @@
   <ItemGroup>
     <None Include="Resources\123418.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
