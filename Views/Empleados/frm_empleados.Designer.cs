@@ -36,9 +36,7 @@ namespace _06Publicaciones.Views.Empleados
             this.lbl_Titulo = new System.Windows.Forms.Label();
             this.btn_Insertar = new System.Windows.Forms.Button();
             this.btn_Limpiar = new System.Windows.Forms.Button();
-            this.txt_IDpublicacion = new System.Windows.Forms.TextBox();
             this.txt_NivelTrabajo = new System.Windows.Forms.TextBox();
-            this.txt_IDtrabajo = new System.Windows.Forms.TextBox();
             this.txt_Apellido = new System.Windows.Forms.TextBox();
             this.txt_InicialN = new System.Windows.Forms.TextBox();
             this.txt_Nombre = new System.Windows.Forms.TextBox();
@@ -53,13 +51,13 @@ namespace _06Publicaciones.Views.Empleados
             this.lbl_IDempleado = new System.Windows.Forms.Label();
             this.dtp_FechaContratacion = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.cmb_IdPublicacion = new System.Windows.Forms.ComboBox();
+            this.cmb_IdTrabajo = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btn_Eliminar
             // 
-            this.btn_Eliminar.Location = new System.Drawing.Point(357, 544);
+            this.btn_Eliminar.Location = new System.Drawing.Point(357, 515);
             this.btn_Eliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Eliminar.Name = "btn_Eliminar";
             this.btn_Eliminar.Size = new System.Drawing.Size(112, 36);
@@ -70,7 +68,7 @@ namespace _06Publicaciones.Views.Empleados
             // 
             // btn_Modificar
             // 
-            this.btn_Modificar.Location = new System.Drawing.Point(237, 544);
+            this.btn_Modificar.Location = new System.Drawing.Point(237, 515);
             this.btn_Modificar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Modificar.Name = "btn_Modificar";
             this.btn_Modificar.Size = new System.Drawing.Size(112, 36);
@@ -112,7 +110,7 @@ namespace _06Publicaciones.Views.Empleados
             // 
             // btn_Insertar
             // 
-            this.btn_Insertar.Location = new System.Drawing.Point(237, 498);
+            this.btn_Insertar.Location = new System.Drawing.Point(237, 469);
             this.btn_Insertar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Insertar.Name = "btn_Insertar";
             this.btn_Insertar.Size = new System.Drawing.Size(112, 36);
@@ -123,7 +121,7 @@ namespace _06Publicaciones.Views.Empleados
             // 
             // btn_Limpiar
             // 
-            this.btn_Limpiar.Location = new System.Drawing.Point(357, 498);
+            this.btn_Limpiar.Location = new System.Drawing.Point(357, 469);
             this.btn_Limpiar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Limpiar.Name = "btn_Limpiar";
             this.btn_Limpiar.Size = new System.Drawing.Size(112, 36);
@@ -132,29 +130,13 @@ namespace _06Publicaciones.Views.Empleados
             this.btn_Limpiar.UseVisualStyleBackColor = true;
             this.btn_Limpiar.Click += new System.EventHandler(this.btn_Limpiar_Click);
             // 
-            // txt_IDpublicacion
-            // 
-            this.txt_IDpublicacion.Location = new System.Drawing.Point(207, 382);
-            this.txt_IDpublicacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txt_IDpublicacion.Name = "txt_IDpublicacion";
-            this.txt_IDpublicacion.Size = new System.Drawing.Size(298, 26);
-            this.txt_IDpublicacion.TabIndex = 37;
-            // 
             // txt_NivelTrabajo
             // 
-            this.txt_NivelTrabajo.Location = new System.Drawing.Point(207, 335);
+            this.txt_NivelTrabajo.Location = new System.Drawing.Point(207, 317);
             this.txt_NivelTrabajo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_NivelTrabajo.Name = "txt_NivelTrabajo";
             this.txt_NivelTrabajo.Size = new System.Drawing.Size(298, 26);
             this.txt_NivelTrabajo.TabIndex = 36;
-            // 
-            // txt_IDtrabajo
-            // 
-            this.txt_IDtrabajo.Location = new System.Drawing.Point(207, 276);
-            this.txt_IDtrabajo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txt_IDtrabajo.Name = "txt_IDtrabajo";
-            this.txt_IDtrabajo.Size = new System.Drawing.Size(298, 26);
-            this.txt_IDtrabajo.TabIndex = 35;
             // 
             // txt_Apellido
             // 
@@ -191,7 +173,7 @@ namespace _06Publicaciones.Views.Empleados
             // lbl_FechaContratacion
             // 
             this.lbl_FechaContratacion.AutoSize = true;
-            this.lbl_FechaContratacion.Location = new System.Drawing.Point(29, 442);
+            this.lbl_FechaContratacion.Location = new System.Drawing.Point(29, 413);
             this.lbl_FechaContratacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_FechaContratacion.Name = "lbl_FechaContratacion";
             this.lbl_FechaContratacion.Size = new System.Drawing.Size(175, 20);
@@ -201,7 +183,7 @@ namespace _06Publicaciones.Views.Empleados
             // lbl_IDpublicacion
             // 
             this.lbl_IDpublicacion.AutoSize = true;
-            this.lbl_IDpublicacion.Location = new System.Drawing.Point(90, 382);
+            this.lbl_IDpublicacion.Location = new System.Drawing.Point(89, 367);
             this.lbl_IDpublicacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_IDpublicacion.Name = "lbl_IDpublicacion";
             this.lbl_IDpublicacion.Size = new System.Drawing.Size(114, 20);
@@ -211,7 +193,7 @@ namespace _06Publicaciones.Views.Empleados
             // lbl_NivelTrabajo
             // 
             this.lbl_NivelTrabajo.AutoSize = true;
-            this.lbl_NivelTrabajo.Location = new System.Drawing.Point(79, 335);
+            this.lbl_NivelTrabajo.Location = new System.Drawing.Point(79, 317);
             this.lbl_NivelTrabajo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_NivelTrabajo.Name = "lbl_NivelTrabajo";
             this.lbl_NivelTrabajo.Size = new System.Drawing.Size(125, 20);
@@ -270,7 +252,7 @@ namespace _06Publicaciones.Views.Empleados
             // 
             // dtp_FechaContratacion
             // 
-            this.dtp_FechaContratacion.Location = new System.Drawing.Point(207, 442);
+            this.dtp_FechaContratacion.Location = new System.Drawing.Point(207, 413);
             this.dtp_FechaContratacion.Name = "dtp_FechaContratacion";
             this.dtp_FechaContratacion.Size = new System.Drawing.Size(297, 26);
             this.dtp_FechaContratacion.TabIndex = 45;
@@ -286,35 +268,29 @@ namespace _06Publicaciones.Views.Empleados
             this.label1.TabIndex = 46;
             this.label1.Text = "Formato: [A-Z] [A-Z] [A-Z] [1-9] [0-9] [0-9] [0-9] [0-9] [M]";
             // 
-            // label2
+            // cmb_IdPublicacion
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(444, 307);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
-            this.label2.TabIndex = 47;
-            this.label2.Text = "Formato: 00";
+            this.cmb_IdPublicacion.FormattingEnabled = true;
+            this.cmb_IdPublicacion.Location = new System.Drawing.Point(208, 364);
+            this.cmb_IdPublicacion.Name = "cmb_IdPublicacion";
+            this.cmb_IdPublicacion.Size = new System.Drawing.Size(297, 28);
+            this.cmb_IdPublicacion.TabIndex = 49;
             // 
-            // label3
+            // cmb_IdTrabajo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(432, 413);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 13);
-            this.label3.TabIndex = 48;
-            this.label3.Text = "Formato: 0000";
+            this.cmb_IdTrabajo.FormattingEnabled = true;
+            this.cmb_IdTrabajo.Location = new System.Drawing.Point(207, 273);
+            this.cmb_IdTrabajo.Name = "cmb_IdTrabajo";
+            this.cmb_IdTrabajo.Size = new System.Drawing.Size(297, 28);
+            this.cmb_IdTrabajo.TabIndex = 50;
             // 
             // frm_empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(883, 614);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cmb_IdTrabajo);
+            this.Controls.Add(this.cmb_IdPublicacion);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtp_FechaContratacion);
             this.Controls.Add(this.btn_Eliminar);
@@ -324,9 +300,7 @@ namespace _06Publicaciones.Views.Empleados
             this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.btn_Insertar);
             this.Controls.Add(this.btn_Limpiar);
-            this.Controls.Add(this.txt_IDpublicacion);
             this.Controls.Add(this.txt_NivelTrabajo);
-            this.Controls.Add(this.txt_IDtrabajo);
             this.Controls.Add(this.txt_Apellido);
             this.Controls.Add(this.txt_InicialN);
             this.Controls.Add(this.txt_Nombre);
@@ -360,9 +334,7 @@ namespace _06Publicaciones.Views.Empleados
         private System.Windows.Forms.Label lbl_Titulo;
         private System.Windows.Forms.Button btn_Insertar;
         private System.Windows.Forms.Button btn_Limpiar;
-        private System.Windows.Forms.TextBox txt_IDpublicacion;
         private System.Windows.Forms.TextBox txt_NivelTrabajo;
-        private System.Windows.Forms.TextBox txt_IDtrabajo;
         private System.Windows.Forms.TextBox txt_Apellido;
         private System.Windows.Forms.TextBox txt_InicialN;
         private System.Windows.Forms.TextBox txt_Nombre;
@@ -377,7 +349,7 @@ namespace _06Publicaciones.Views.Empleados
         private System.Windows.Forms.Label lbl_IDempleado;
         private System.Windows.Forms.DateTimePicker dtp_FechaContratacion;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cmb_IdPublicacion;
+        private System.Windows.Forms.ComboBox cmb_IdTrabajo;
     }
 }

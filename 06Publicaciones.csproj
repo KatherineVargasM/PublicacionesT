@@ -65,6 +65,7 @@
     <Compile Include="Config\ControlErrores.cs" />
     <Compile Include="Controllers\AutorController.cs" />
     <Compile Include="Controllers\EmpleadoController.cs" />
+    <Compile Include="Controllers\PublicacionController.cs" />
     <Compile Include="Controllers\TrabajoController.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -74,6 +75,7 @@
     </Compile>
     <Compile Include="Models\AutoresModel.cs" />
     <Compile Include="Models\EmpleadosModel.cs" />
+    <Compile Include="Models\PublicacionesModel.cs" />
     <Compile Include="Models\TrabajosModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

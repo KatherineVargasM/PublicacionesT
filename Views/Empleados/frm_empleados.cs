@@ -16,15 +16,22 @@ namespace _06Publicaciones.Views.Empleados
     public partial class frm_empleados : Form
     {
         private EmpleadoController empleadoController;
+        private TrabajoController trabajoController;
+        private PublicacionController publicacionController;
+
         public frm_empleados()
         {
             InitializeComponent();
             empleadoController = new EmpleadoController();
+            trabajoController = new TrabajoController();
+            publicacionController = new PublicacionController();
         }
-        
+
         private void frm_empleados_Load(object sender, EventArgs e)
         {
             CargarEmpleados();
+            CargarTrabajos();
+            CargarPublicaciones();
         }
 
         private void CargarEmpleados()
@@ -35,6 +42,25 @@ namespace _06Publicaciones.Views.Empleados
             lst_Empleados.DisplayMember = "NombreCompleto";
             lst_Empleados.ValueMember = "IdEmpleado";
         }
+
+        private void CargarTrabajos()
+        {
+            var listaTrabajos = trabajoController.ObtenerTodosLosTrabajos();
+            cmb_IdTrabajo.DataSource = null;
+            cmb_IdTrabajo.DataSource = listaTrabajos;
+            cmb_IdTrabajo.DisplayMember = "DescripcionTrabajo";
+            cmb_IdTrabajo.ValueMember = "IdTrabajo";
+        }
+
+        private void CargarPublicaciones()
+        {
+            var listaPublicacion = publicacionController.ObtenerTodasLasPublicaciones();
+            cmb_IdPublicacion.DataSource = null;
+            cmb_IdPublicacion.DataSource = listaPublicacion;
+            cmb_IdPublicacion.DisplayMember = "IdPublicacion";
+            cmb_IdPublicacion.ValueMember = "IdPublicacion";
+        }
+
 
         private bool ValidarCampos(params TextBox[] cajadetexto)
         {
@@ -48,6 +74,7 @@ namespace _06Publicaciones.Views.Empleados
             }
             return true;
         }
+
         private bool EsEmpIdValido(string empId)
         {
             var patron = @"^[A-Z]{3}[1-9][0-9]{4}[FM]$|^[A-Z]-[A-Z][1-9][0-9]{4}[FM]$";
@@ -58,7 +85,7 @@ namespace _06Publicaciones.Views.Empleados
         {
             try
             {
-                if (!ValidarCampos(txt_IDempleado, txt_Nombre, txt_InicialN, txt_Apellido, txt_IDtrabajo, txt_NivelTrabajo, txt_IDpublicacion))
+                if (!ValidarCampos(txt_IDempleado, txt_Nombre, txt_InicialN, txt_Apellido))
                 {
                     return;
                 }
@@ -75,9 +102,9 @@ namespace _06Publicaciones.Views.Empleados
                     Nombre = txt_Nombre.Text,
                     Inicial2doNombre = txt_InicialN.Text,
                     Apellido = txt_Apellido.Text,
-                    IdTrabajo = Convert.ToInt32(txt_IDtrabajo.Text),
+                    IdTrabajo = Convert.ToInt32(cmb_IdTrabajo.SelectedValue),
                     NivelTrabajo = Convert.ToInt32(txt_NivelTrabajo.Text),
-                    IdPublicacion = txt_IDpublicacion.Text,
+                    IdPublicacion = cmb_IdPublicacion.SelectedValue.ToString(),
                     FechaContratacion = dtp_FechaContratacion.Value
                 };
 
@@ -95,7 +122,7 @@ namespace _06Publicaciones.Views.Empleados
         {
             try
             {
-                if (!ValidarCampos(txt_IDempleado, txt_Nombre, txt_InicialN, txt_Apellido, txt_IDtrabajo, txt_NivelTrabajo, txt_IDpublicacion))
+                if (!ValidarCampos(txt_IDempleado, txt_Nombre, txt_InicialN, txt_Apellido))
                 {
                     return;
                 }
@@ -106,9 +133,9 @@ namespace _06Publicaciones.Views.Empleados
                     Nombre = txt_Nombre.Text,
                     Inicial2doNombre = txt_InicialN.Text,
                     Apellido = txt_Apellido.Text,
-                    IdTrabajo = Convert.ToInt32(txt_IDtrabajo.Text),
+                    IdTrabajo = Convert.ToInt32(cmb_IdTrabajo.SelectedValue),
                     NivelTrabajo = Convert.ToInt32(txt_NivelTrabajo.Text),
-                    IdPublicacion = txt_IDpublicacion.Text,
+                    IdPublicacion = cmb_IdPublicacion.SelectedValue.ToString(),
                     FechaContratacion = dtp_FechaContratacion.Value
                 };
 
@@ -169,9 +196,9 @@ namespace _06Publicaciones.Views.Empleados
             txt_Nombre.Clear();
             txt_InicialN.Clear();
             txt_Apellido.Clear();
-            txt_IDtrabajo.Clear();
+            cmb_IdTrabajo.SelectedIndex = -1;
             txt_NivelTrabajo.Clear();
-            txt_IDpublicacion.Clear();
+            cmb_IdPublicacion.SelectedIndex = -1;
             dtp_FechaContratacion.Value = DateTime.Now;
         }
 
@@ -187,9 +214,9 @@ namespace _06Publicaciones.Views.Empleados
                     txt_Nombre.Text = empleado.Nombre;
                     txt_InicialN.Text = empleado.Inicial2doNombre;
                     txt_Apellido.Text = empleado.Apellido;
-                    txt_IDtrabajo.Text = empleado.IdTrabajo.ToString();
+                    cmb_IdTrabajo.SelectedValue = empleado.IdTrabajo;
                     txt_NivelTrabajo.Text = empleado.NivelTrabajo.ToString();
-                    txt_IDpublicacion.Text = empleado.IdPublicacion;
+                    cmb_IdPublicacion.SelectedValue = empleado.IdPublicacion;
                     dtp_FechaContratacion.Value = empleado.FechaContratacion;
                 }
                 else
@@ -204,3 +231,4 @@ namespace _06Publicaciones.Views.Empleados
         }
     }
 }
+
