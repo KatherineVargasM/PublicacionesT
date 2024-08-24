@@ -24,7 +24,7 @@ namespace _06Publicaciones.Models
                     {
                         listaPublicaciones.Add(new PublicacionesModel
                         {
-                            IdPublicacion = reader["pub_id"] != DBNull.Value ? reader["pub_id"].ToString() : string.Empty, // Cambiado de Convert.ToInt32 a ToString()
+                            IdPublicacion = reader["pub_id"] != DBNull.Value ? reader["pub_id"].ToString() : string.Empty,
                             Logo = reader["logo"]?.ToString() ?? string.Empty,
                             Informacion = reader["pr_info"]?.ToString() ?? string.Empty
                         });

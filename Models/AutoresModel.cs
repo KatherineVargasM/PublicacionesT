@@ -86,7 +86,6 @@ namespace _06Publicaciones
 
                     using (var comando = new SqlCommand(consulta, conexion))
                     {
-                        //sql inyection
                         comando.Parameters.AddWithValue("@IdAutor", autor.IdAutor);
                         comando.Parameters.AddWithValue("@Apellido", autor.Apellido);
                         comando.Parameters.AddWithValue("@Nombre", autor.Nombre);
