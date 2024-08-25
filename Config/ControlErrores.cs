@@ -22,17 +22,17 @@ namespace _06Publicaciones.config
         }
 
         public static void ManejarInsertar() {
-            MessageBox.Show("Autor agregado con exito.", "Informacion", MessageBoxButtons.OK);
+            MessageBox.Show("Se ha agregado con exito.", "Información", MessageBoxButtons.OK);
         }
 
         public static void ManejarActualizar()
         {
-            MessageBox.Show("Autor actualizado con exito.", "Información", MessageBoxButtons.OK); ;
+            MessageBox.Show("Se ha actualizado con exito.", "Información", MessageBoxButtons.OK); ;
         }
 
         public static void ManejarEliminar()
         {
-            MessageBox.Show("Autor eliminado con exito.", "Informacion", MessageBoxButtons.OK);
+            MessageBox.Show("Se ha eliminado con exito.", "Información", MessageBoxButtons.OK);
         }
     }
 }
